@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavbarForDashboard from "../components/NavbarForDashboard";
 import Elearning from "../assets/images/Elearning.png";
+import { Margin } from "@mui/icons-material";
 const AllEducators = () => {
   const { fetchAllEducators } = useContext(EventContext);
   const [allEducatorsList, setAllEducatorsList] = useState([]);
@@ -17,7 +18,9 @@ const AllEducators = () => {
   }, []);
   const renderFeaturesCard = (educators) => {
     return (
+
       <div className="grid-container">
+        
         {educators.map((f) => {
           return (
             <div className="cards  relative flex flex-col gap-2 px-3 py-6  h-fit items-start justify-center  rounded-md text-center bg-white">
@@ -41,28 +44,19 @@ const AllEducators = () => {
           );
         })}
       </div>
+
     );
   };
   return (
-    <div className="bg-slate-800 m-0 h-fit h-max-full">
+    <div className="background-container3 min-h-screen">
       <NavbarForDashboard />
-      <div className="w-screen h-screen  flex flex-row justify-center items-center p-5 m-6 gap-6">
-        <div>
-          <h1 className=" text-4xl font-bold text-yellow-500 p-3 mb-6 mt-6">
-            Learning from the best
-          </h1>
-          <p className="text-lg text-white text-start max-w-lg mb-6">
-            At [Your EdTech Platform], we are proud to host a diverse community
-            of passionate educators who are dedicated to sharing their knowledge
-            and expertise with learners from all walks of life.
-            <br /> Our educators come from various fields, bringing real-world
-            experience and a commitment to quality education to our platform.
-            Explore their profiles below to discover the educators who will
-            guide you on your learning journey.
-          </p>
-        </div>
-        <img src={Elearning} className="h-full w-full m-6" />
+  
+      <div className="  flex flex-col justify-center items-center p-5 m-6 gap-1">
+      <h1 className="text-4xl font-bold text-black-400 p-1 mb-6 mt-6" >
+        Community People
+      </h1>
       </div>
+
       <div>{renderFeaturesCard(allEducatorsList)}</div>
     </div>
   );

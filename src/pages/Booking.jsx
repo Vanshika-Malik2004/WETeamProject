@@ -5,6 +5,7 @@ import Calendar from "react-calendar";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import "react-calendar/dist/Calendar.css";
 import BookingTimeContainer from "../components/BookingTimeContainer";
+import NavbarForDashboard from "../components/NavbarForDashboard";
 
 const Booking = () => {
   const [date, setDate] = useState();
@@ -25,11 +26,19 @@ const Booking = () => {
   };
 
   return (
-    <div
+
+    <div className="background-booking min-h-screen ">
+    <NavbarForDashboard />
+    <div className="px-0 py-0" >
+      <div className="flex flex-col justify-between items-center mb-1">
+        <h1 className="font-Lexend font-semibold tracking-tighter text-solid-500 text-5xl" style={{marginTop: 2 + 'em'}} >
+          Book A Slot
+        </h1>
+        <div
       id="booking"
       className="flex items-center justify-center h-screen mx-auto"
     >
-      <div className="max-w-screen bg-white  w-fit transition-all duration-300 ease-in-out  font-Lexend shadow-custom rounded-xl h-[600px] flex items-center justify-between ">
+      <div className="w-[80%] bg-white  w-fit transition-all duration-300 ease-in-out  font-Lexend shadow-custom rounded-xl h-[70%] flex items-center justify-between ">
         <div className="w-[25%] p-10 bg-slate-800 h-full rounded-tl-xl rounded-bl-xl">
           <img
             src={data?.profilePhoto}
@@ -72,6 +81,12 @@ const Booking = () => {
         </div>
       </div>
     </div>
+
+      </div>
+
+    </div>
+  </div>
+    
   );
 };
 

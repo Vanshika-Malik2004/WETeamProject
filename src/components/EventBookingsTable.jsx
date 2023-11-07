@@ -6,13 +6,25 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import NavbarForDashboard from "../components/NavbarForDashboard";
 
 const EventBookingsTable = ({ eventBookings }) => {
   return (
-    <TableContainer component={Paper}>
+    <div className="background-container min-h-screen ">
+      <NavbarForDashboard />
+      <div className="px-16 py-20">
+        <div className="flex flex-col justify-between items-center mb-20">
+          <h1 className="font-Lexend font-semibold tracking-tighter text-solid-500 text-5xl">
+            All Bookings ({eventBookings?.length})
+          </h1>
+
+
+        </div>
+
+        <TableContainer component={Paper}>
       <Table aria-label="simple table">
         <TableHead>
-          <TableRow className="!bg-yellow-500">
+          <TableRow className="!bg-purple-300">
             <TableCell className="!font-bold !text-lg !font-Lexend">
               Serial Num
             </TableCell>
@@ -84,6 +96,9 @@ const EventBookingsTable = ({ eventBookings }) => {
         </TableBody>
       </Table>
     </TableContainer>
+      </div>
+    </div>
+    
   );
 };
 

@@ -91,7 +91,7 @@ export default function BasicModal() {
     <div>
       <button
         onClick={handleOpen}
-        className="flex items-center bg-yellow-500 z-10 px-4 py-2 text-white hover:scale-95 rounded-lg duration-300 focus:outline-none transition font-Lexend font-light"
+        className="flex items-center bg-purple-500 z-10 px-4 py-2 text-white hover:scale-95 rounded-lg duration-300 focus:outline-none transition font-Lexend font-medium"
       >
         <AddIcon /> Create meeting
       </button>

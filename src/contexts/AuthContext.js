@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [fetchingUser, setFetchingUser] = useState(true);
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  // const [authError, setAuthError] = useState("");
+  const [authError, setAuthError] = useState("");
 
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {

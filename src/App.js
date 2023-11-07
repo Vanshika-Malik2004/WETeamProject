@@ -7,6 +7,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import BookingSuccessfull from "./pages/BookingSuccessfull";
 import EventBookings from "./pages/EventBookings";
 import AllEducators from "./pages/AllEducators";
+import About from "./pages/About";
 import EducatorEventPage from "./pages/EducatorEventPage";
 import NavbarForDashboard from "./components/NavbarForDashboard";
 
@@ -51,6 +52,7 @@ function App() {
           }
         />
         <Route path="/allEducators" component={AllEducators} />
+        <Route path="/about" component={About} />
         <Route path="*" render={() => <Redirect to="/" />} />
       </Switch>
     </>

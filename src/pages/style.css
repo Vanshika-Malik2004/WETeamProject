@@ -1,0 +1,23 @@
+.background-container {
+    background-image: url('../assets/images/bg4.svg'); /* Replace 'your-image.jpg' with the actual image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.background-container2 {
+    background-image: url('../assets/images/bg2.svg'); /* Replace 'your-image.jpg' with the actual image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.background-container3 {
+    background-image: url('../assets/images/bg3.svg'); /* Replace 'your-image.jpg' with the actual image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.background-booking {
+    background-image: url('../assets/images/bg2.svg'); /* Replace 'your-image.jpg' with the actual image path */
+    background-size: cover;
+    background-position: center;
+}
